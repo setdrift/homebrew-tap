@@ -5,13 +5,13 @@
 class Setdrift < Formula
   desc "Export a Kubernetes cluster as a Git-ready Kustomize repository"
   homepage "https://setdrift.io"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.0/setdrift_0.3.0_darwin_amd64.tar.gz"
-      sha256 "bc8c8fa8d1eee693d01114c0579050ae54cbd2c8f86905d6ad045eaf6ccf26e9"
+      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.1/setdrift_0.3.1_darwin_amd64.tar.gz"
+      sha256 "fab21b50927fd5bc0447999787ce35f3e0e80a5cdae454e84cdbe1edeb9ab3f4"
 
       define_method(:install) do
         bin.install "setdrift"
@@ -19,8 +19,8 @@ class Setdrift < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.0/setdrift_0.3.0_darwin_arm64.tar.gz"
-      sha256 "604b0502b884081070db192231af12d4ff2bcc99bbae7db037434fa327bfaf26"
+      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.1/setdrift_0.3.1_darwin_arm64.tar.gz"
+      sha256 "bb60215e2e357d9997f57eca7fe04b26282244038dee43e17265adf5c3cdf3bf"
 
       define_method(:install) do
         bin.install "setdrift"
@@ -31,16 +31,16 @@ class Setdrift < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.0/setdrift_0.3.0_linux_amd64.tar.gz"
-      sha256 "2b1e53e686a084b2b848cc47edb4c8a85761245092b1bef628e63a3b833c58cf"
+      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.1/setdrift_0.3.1_linux_amd64.tar.gz"
+      sha256 "7072bc5b1cdfb5bbff73e84fec05f2b87b99c7276c54160d7a0782f1c988f33f"
       define_method(:install) do
         bin.install "setdrift"
         generate_completions_from_executable(bin/"setdrift", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.0/setdrift_0.3.0_linux_arm64.tar.gz"
-      sha256 "19d7c95b8fa72579b3b635b314842e9e4ee4b6d0f5e2594d433fd3aeb990df3e"
+      url "https://github.com/setdrift/setdrift-engine/releases/download/v0.3.1/setdrift_0.3.1_linux_arm64.tar.gz"
+      sha256 "b80d2f4d64aa0e97dc062eaac7e6df32d9d645fd37f9c2dc82ccebc35465206b"
       define_method(:install) do
         bin.install "setdrift"
         generate_completions_from_executable(bin/"setdrift", "completion")
